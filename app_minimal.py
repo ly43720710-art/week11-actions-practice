@@ -10,7 +10,7 @@ MODEL_PATH = Path(__file__).parent / "models" / "yolo11n.pt"
 CONFIDENCE = 0.25  # 실습: 0.80으로 바꾸고 같은 이미지를 비교하세요.
 
 @st.cache_resource
-def load_model()
+def load_model():
     return YOLO(str(MODEL_PATH)), Lock()
 
 st.set_page_config(page_title="AI 이미지 객체 탐지", layout="wide")
